@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: black;
+}
+#oyun{
+    width: 800px;
+    height: 200px;
+    border: 1px solid;
+    background-color: #fff;
+    margin: 100px auto;
+    position: relative;
+     overflow: hidden; 
+}
+#trex{
+    position: absolute;
+    width: 39px;
+    height: 42px;
+    background: url(trex.png);
+    bottom: 0;
+}
+.trex-animate{
+    animation: trex .5s linear;
+}
+
+#cactus{
+    position: absolute;
+  width: 23px;
+  height: 46px;
+  background: url(cactus.png);
+  bottom: 0;
+  left: 775px;
+}
+.cactus-animate{   /*Biz istediğimiz zaman başlasın animasyon */
+    animation: cactus 2s linear infinite;
+}
+
+@keyframes cactus{
+    0%{left:775px;}    /* 0. konumunda yerinde başlasın*/
+    100%{left:-40px;}   /* Son konumunda en sola gelsin başlasın*/
+}
+@keyframes trex{
+    0%{bottom:0px;}
+    25%{bottom:85px;}
+    75%{bottom:85px;}
+    75%{bottom:0px;}
+}
